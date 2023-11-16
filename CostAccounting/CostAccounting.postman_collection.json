@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "2ca5179c-2b9b-4d31-a0ce-27add58c4082",
+		"name": "CostAccounting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27398788",
+		"_collection_link": "https://crimson-meadow-217542.postman.co/workspace/8b8f57f7-1db1-4d58-8f63-608d364aa8d6/collection/27398788-2ca5179c-2b9b-4d31-a0ce-27add58c4082?action=share&source=collection_link&creator=27398788"
+	},
+	"item": [
+		{
+			"name": "Get all purchases",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7297/api/purchaseApi",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7297",
+					"path": [
+						"api",
+						"purchaseApi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get purchase by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7297/api/purchaseApi/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7297",
+					"path": [
+						"api",
+						"purchaseApi",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create purchase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cost\": 150,\r\n    \"description\": \"молоко\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7297/api/purchaseApi/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7297",
+					"path": [
+						"api",
+						"purchaseApi",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete purchase",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7297/api/purchaseApi/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7297",
+					"path": [
+						"api",
+						"purchaseApi",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"продукты\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7297/api/categoriesApi",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7297",
+					"path": [
+						"api",
+						"categoriesApi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7297/api/categoriesApi",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7297",
+					"path": [
+						"api",
+						"categoriesApi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get category by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7297/api/categoriesApi/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7297",
+					"path": [
+						"api",
+						"categoriesApi",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete catefory",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7297/api/categoriesApi/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7297",
+					"path": [
+						"api",
+						"categoriesApi",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

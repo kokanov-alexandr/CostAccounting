@@ -9,10 +9,13 @@ namespace CostAccounting.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly HttpClient _httpClient;
         private const string baseApiUrl = "https://localhost:7297/api/purchaseApi";
-        public HomeController(ILogger<HomeController> logger)
+        private AppDbContext dbContext;
+
+        public HomeController(ILogger<HomeController> logger, AppDbContext dbContext)
         {
             _logger = logger;
             _httpClient = new HttpClient();
+            this.dbContext = dbContext;
         }
 
         [HttpGet]
@@ -29,6 +32,8 @@ namespace CostAccounting.Controllers
             {
                 return StatusCode((int)response.StatusCode);
             }
+
+
         }
 
         [HttpPost]
